@@ -1,5 +1,7 @@
 # routed-anecdotes
 
+Link to the deployed application: https://exercise-1-16-cloud-deployment.onrender.com/
+
 ## Prerequisites
 - **Node.js 18+** (LTS recommended)
 - **npm** (included with Node.js)
