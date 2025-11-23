@@ -5,10 +5,11 @@ on:
     branches:
       - main
 
-deploy:
-  if: ${{ github.event_name == 'push' }}
-  runs-on: ubuntu-latest
-  steps:
-    - name: Trigger API deployment
-      run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_API_ID }}?key=${{ secrets.RENDER_API_KEY }}
+jobs:
+  deploy:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger API deployment
+        run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_API_ID }}?key=${{ secrets.RENDER_API_KEY }}
 
